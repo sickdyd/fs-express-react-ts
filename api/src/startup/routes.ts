@@ -1,5 +1,5 @@
-import indexRouter from '@src/routes/index'
-import usersRouter from '@src/routes/users'
+import indexRouter from '../routes/index'
+import usersRouter from '../routes/users'
 
 export default function routes(app: any) {
   app.use('/', indexRouter)

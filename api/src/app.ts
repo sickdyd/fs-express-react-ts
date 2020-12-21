@@ -2,7 +2,7 @@ import express from 'express'
 import path from 'path'
 import logger from 'morgan'
 
-import routes from '@src/startup/routes'
+import routes from './startup/routes'
 
 const app = express()
 app.use(logger('dev'))
