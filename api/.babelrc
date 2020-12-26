@@ -9,7 +9,7 @@
           "@root": ["./"],
           "@src": ["./src"]
         },
-        "extensions": [".js", ".ts", ".tsx"]
+        "extensions": [".js", ".ts"]
       }
     ],
     "@babel/plugin-transform-modules-commonjs",

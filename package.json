@@ -6,7 +6,7 @@
     "api:start": "yarn workspace api run start",
     "api:build": "yarn workspace api run build",
     "api:debug": "yarn workspace api run debug",
-    "api:typecheck": "yarn workspace api run typecheck"
+    "api:checks": "yarn workspace api run typecheck && yarn workspace api run lint"
   },
   "workspaces": [
     "api",
