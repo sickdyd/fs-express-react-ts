@@ -15,8 +15,8 @@ server.listen(port)
 server.on('error', onError)
 server.on('listening', onListening)
 
-function onError(error: any) {
-  debug(error)
+function onError(error: Error) {
+  debug(error.message)
 }
 
 function onListening() {
