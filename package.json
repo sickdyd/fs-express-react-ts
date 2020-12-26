@@ -2,7 +2,11 @@
   "private": true,
   "name": "fs-express-react-ts",
   "scripts": {
-    "api": "yarn workspace api run dev"
+    "api:dev": "yarn workspace api run dev",
+    "api:start": "yarn workspace api run start",
+    "api:build": "yarn workspace api run build",
+    "api:debug": "yarn workspace api run debug",
+    "api:typecheck": "yarn workspace api run typecheck"
   },
   "workspaces": [
     "api",
