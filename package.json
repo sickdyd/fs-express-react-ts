@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "name": "fs-express-react-ts",
+  "scripts": {
+    "api": "yarn workspace api run dev"
+  },
+  "workspaces": [
+    "api",
+    "customer"
+  ]
+}
