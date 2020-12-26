@@ -2,7 +2,7 @@ import { Router } from 'express'
 const users = Router()
 
 users.get('/', function (req, res) {
-  res.send('respond with a resource')
+  res.send('users list')
 })
 
 export default users
