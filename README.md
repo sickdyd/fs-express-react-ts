@@ -33,8 +33,40 @@ Start the debugger for Chrome:
 yarn api:debug
 ```
 
-Run all checks:
+Typecheck:
 
 ```
-yarn api:checks
+yarn workspace api run typecheck
+```
+
+Eslint:
+
+```
+yarn workspace api run lint
+```
+
+# Customer
+
+Run app for development:
+
+```
+yarn customer:dev
+```
+
+Create customer build:
+
+```
+yarn customer:build
+```
+
+Typecheck:
+
+```
+yarn workspace customer run typecheck
+```
+
+Eslint:
+
+```
+yarn workspace customer run lint
 ```
