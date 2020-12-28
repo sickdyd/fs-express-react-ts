@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-export default function App() {
+export default function App(): JSX.Element {
   const [users, setUsers] = useState(null)
   useEffect(() => {
     const getData = async () => {
