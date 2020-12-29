@@ -3,10 +3,11 @@
 import app from './app'
 import http from 'http'
 import debug from 'debug'
+import config from 'config'
 
 debug('api:server')
 
-const port = process.env.PORT || '3001'
+const port = config.get('port')
 app.set('port', port)
 
 const server = http.createServer(app)
