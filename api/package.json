@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon",
+    "dev": "export DEBUG=api && nodemon",
     "typecheck": "tsc --noEmit",
     "debug": "yarn build && node --inspect --inspect-brk build/",
     "test": "jest --watchAll",

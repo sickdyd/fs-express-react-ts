@@ -2,10 +2,10 @@
 
 import app from './app'
 import http from 'http'
-import debug from 'debug'
 import config from 'config'
+import debugFn from 'debug'
 
-debug('api:server')
+const debug = debugFn('api')
 
 const port = config.get('port')
 app.set('port', port)
