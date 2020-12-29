@@ -8,7 +8,7 @@
     "debug": "yarn build && node --inspect --inspect-brk build/",
     "test": "jest --watchAll",
     "build": "rm -rf build/ && babel src --source-maps --extensions '.js,.ts,.tsx' --ignore '**/*.test.ts' -d build",
-    "start": "yarn run build && node build/index.js",
+    "start": "export NODE_ENV=production && export DEBUG=api && yarn run build && node build/index.js",
     "lint": "eslint . --ext .ts"
   },
   "jest": {
