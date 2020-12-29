@@ -3,9 +3,7 @@
 import app from './app'
 import http from 'http'
 import config from 'config'
-import debugFn from 'debug'
-
-const debug = debugFn('api')
+import logger from '@src/startup/logging'
 
 const port = config.get('port')
 app.set('port', port)
@@ -17,9 +15,9 @@ server.on('error', onError)
 server.on('listening', onListening)
 
 function onError(error: Error) {
-  debug(error.message)
+  logger.error(error.message)
 }
 
 function onListening() {
-  debug(`Listening on ${port}`)
+  logger.info(`Listening to port ${port}...`)
 }
