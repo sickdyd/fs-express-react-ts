@@ -1,4 +1,4 @@
-const request = require('supertest')
+import request from 'supertest'
 import app from '@src/app'
 
 describe('/users', () => {
