@@ -65,3 +65,6 @@ build/
 
 # mac
 .DS_Store
+
+# node version manager
+.nvmrc

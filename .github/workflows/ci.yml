@@ -1,19 +1,21 @@
-name: Node.js CI
+name: fs-express-react-ts
 
 on: [push]
 
 jobs:
-  build:
+  api:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js
+      - name: Lint and Typecheck
         uses: actions/setup-node@v1
         env:
           CI: true
         with:
           node-version: '14.x'
       - run: yarn install
-      - run: yarn checks
-      - run: yarn test
+      - run: yarn workspace api run lint
+      - run: yarn workspace api run typecheck
+      - name: Unit Tests
+      - run: yarn workspace api run jest
