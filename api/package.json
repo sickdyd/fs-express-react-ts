@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nodemon",
-    "typecheck": "tsc --noEmit -w",
+    "typecheck": "tsc --noEmit",
     "debug": "yarn build && node --inspect --inspect-brk build/",
     "test": "jest --watchAll",
     "build": "rm -rf build/ && babel src --source-maps --extensions '.js,.ts,.tsx' --ignore '**/*.test.ts' -d build",
