@@ -3,13 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "export DEBUG=api && nodemon",
-    "typecheck": "tsc --noEmit",
+    "dev": "nodemon",
+    "typecheck": "tsc --noEmit -w",
     "debug": "yarn build && node --inspect --inspect-brk build/",
     "test": "jest --watchAll",
     "build": "rm -rf build/ && babel src --source-maps --extensions '.js,.ts,.tsx' --ignore '**/*.test.ts' -d build",
     "start": "export NODE_ENV=production && yarn run build && node build/index.js",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "checks": "yarn lint & yarn typecheck"
   },
   "jest": {
     "testEnvironment": "node",
@@ -18,7 +19,6 @@
     ]
   },
   "dependencies": {
-    "axios": "^0.21.1",
     "config": "^3.3.3",
     "cors": "^2.8.5",
     "express": "~4.16.1",
