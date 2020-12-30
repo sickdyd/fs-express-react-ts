@@ -61,7 +61,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 export const morganLogging = {
-  write: (text: string) => {
+  write: (text: string): void => {
     logger.info(text.replace(/\n$/, ''))
   }
 }
