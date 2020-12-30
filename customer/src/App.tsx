@@ -5,7 +5,7 @@ export default function App(): JSX.Element {
   const [users, setUsers] = useState(null)
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get('http://localhost:3001/users')
+      const { data } = await axios.get('http://localhost:3030/users')
       setUsers(data)
     }
 
