@@ -6,6 +6,7 @@
     "api:start": "yarn workspace api run start",
     "api:build": "yarn workspace api run build",
     "api:debug": "yarn workspace api run debug",
+    "api:test:unit": "yarn workspace api run test",
     "customer:dev": "yarn workspace customer run dev",
     "customer:build": "yarn workspace customer run build",
     "customer:test": "yarn workspace customer run test"
