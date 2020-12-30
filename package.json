@@ -4,14 +4,7 @@
   "scripts": {
     "api:dev": "yarn workspace api run dev",
     "api:start": "yarn workspace api run start",
-    "api:build": "yarn workspace api run build",
-    "api:debug": "yarn workspace api run debug",
-    "api:test:unit": "yarn workspace api run test",
-    "customer:dev": "yarn workspace customer run dev",
-    "customer:build": "yarn workspace customer run build",
-    "customer:test": "yarn workspace customer run test",
-    "checks": "yarn workspace api run lint & yarn workspace api run typecheck",
-    "test": "yarn workspace api run jest & yarn workspace customer run test"
+    "customer:dev": "yarn workspace customer run dev"
   },
   "workspaces": [
     "api",

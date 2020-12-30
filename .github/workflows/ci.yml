@@ -22,3 +22,23 @@ jobs:
         env:
           CI: true
       - run: yarn workspace api run jest
+
+  customer:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Lint and Typecheck
+        uses: actions/setup-node@v1
+        env:
+          CI: true
+        with:
+          node-version: '14.x'
+      - run: yarn install
+      - run: yarn workspace customer run lint
+      - run: yarn workspace customer run typecheck
+      - name: Unit Tests
+        uses: actions/setup-node@v1
+        env:
+          CI: true
+      - run: yarn workspace customer run test
