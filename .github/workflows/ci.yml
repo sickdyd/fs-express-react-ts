@@ -18,4 +18,7 @@ jobs:
       - run: yarn workspace api run lint
       - run: yarn workspace api run typecheck
       - name: Unit Tests
+        uses: actions/setup-node@v1
+        env:
+          CI: true
       - run: yarn workspace api run jest
