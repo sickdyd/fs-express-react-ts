@@ -1,6 +1,7 @@
 # What is it?
 
 This is a template project to create a full stack application.
+Node version must be `14.x`.
 
 For the backend
 `Node.js` + `Express` + `TypeScript`
