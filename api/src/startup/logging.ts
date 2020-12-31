@@ -4,7 +4,7 @@ process.on('unhandledRejection', (error) => {
   throw error
 })
 
-const settings = {
+const logSettings = {
   maxsize: 5000000,
   maxFiles: 5
 }
@@ -20,21 +20,21 @@ const logger = winston.createLogger({
     new winston.transports.File({
       filename: './logs/error.log',
       level: 'error',
-      ...settings
+      ...logSettings
     }),
     new winston.transports.File({
       filename: './logs/combined.log',
-      ...settings
+      ...logSettings
     })
   ],
   exceptionHandlers: [
     new winston.transports.File({
       filename: './logs/exceptions.log',
-      ...settings
+      ...logSettings
     }),
     new winston.transports.File({
       filename: './logs/combined.log',
-      ...settings
+      ...logSettings
     })
   ],
   handleExceptions: true
