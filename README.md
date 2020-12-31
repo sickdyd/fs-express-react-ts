@@ -1,11 +1,12 @@
 # What is it?
 
-This is a template project to create an application with the following structure:
+This is a template project to create a full stack application.
 
-```
-Backend: Node.js + Express
-Frontend: ReactJS
-```
+For the backend
+`Node.js` + `Express` + `TypeScript`
+
+For the frontend
+`ReactJS` + `TypeScript`
 
 # Backend
 
@@ -15,35 +16,13 @@ Run api for development (nodemon):
 yarn api:dev
 ```
 
-Run the api for production:
+Build and run (for production):
 
 ```
 yarn api:start
 ```
 
-Create api build:
-
-```
-yarn api:build
-```
-
-Start the debugger for Chrome:
-
-```
-yarn api:debug
-```
-
-Typecheck:
-
-```
-yarn workspace api run typecheck
-```
-
-Eslint:
-
-```
-yarn workspace api run lint
-```
+More scripts are available (`build`, `lint`, `typecheck`, `debug` and `test`). Check the `package.json` file in the `./api` folder for details.
 
 # Customer
 
@@ -51,22 +30,4 @@ Run app for development:
 
 ```
 yarn customer:dev
-```
-
-Create customer build:
-
-```
-yarn customer:build
-```
-
-Typecheck:
-
-```
-yarn workspace customer run typecheck
-```
-
-Eslint:
-
-```
-yarn workspace customer run lint
 ```
