@@ -1,6 +1,6 @@
 import { Express } from 'express'
-import indexRouter from '../routes/index'
-import usersRouter from '../routes/users'
+import indexRouter from '@src/routes/index'
+import usersRouter from '@src/routes/users'
 
 export default function routes(app: Express): void {
   app.use('/', indexRouter)
