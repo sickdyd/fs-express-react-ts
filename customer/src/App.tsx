@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import socketIoClient from './socketIoClient'
 
 export default function App(): JSX.Element {
   const [users, setUsers] = useState(null)
@@ -10,6 +11,20 @@ export default function App(): JSX.Element {
     }
 
     getData()
+  }, [])
+
+  useEffect(() => {
+    const handleSocketIo = async () => {
+      const socket = await socketIoClient()
+
+      socket.on('greeting', (data: string) => {
+        console.log(data)
+      })
+
+      socket.emit('greeting', 'hello from client')
+    }
+
+    handleSocketIo()
   }, [])
 
   if (!users) {
