@@ -4,11 +4,13 @@ import app from './app'
 import http from 'http'
 import config from 'config'
 import logger from '@src/startup/logging'
+import socketIoServer from '@src/startup/socketIoServer'
 
 const port = config.get('port')
 app.set('port', port)
 
 const server = http.createServer(app)
+socketIoServer(server)
 
 server.listen(port)
 server.on('error', onError)

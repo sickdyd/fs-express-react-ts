@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { io } from 'socket.io-client'
 
 export default function App(): JSX.Element {
   const [users, setUsers] = useState(null)
@@ -12,9 +13,13 @@ export default function App(): JSX.Element {
     getData()
   }, [])
 
+  const socket = io('http://localhost:3030')
+
+  socket.connect()
+
   if (!users) {
     return <div>Loading...</div>
   }
 
-  return <div>{users}</div>
+  return <div>{socket.connected}</div>
 }

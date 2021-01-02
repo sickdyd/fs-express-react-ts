@@ -4,7 +4,9 @@
   "scripts": {
     "api:dev": "yarn workspace api run dev",
     "api:start": "yarn workspace api run start",
-    "customer:dev": "yarn workspace customer run dev"
+    "customer:dev": "yarn workspace customer run dev",
+    "lint": "yarn workspace customer run lint & yarn workspace api run lint",
+    "typecheck": "yarn workspace customer run typecheck & yarn workspace api run typecheck"
   },
   "workspaces": [
     "api",
